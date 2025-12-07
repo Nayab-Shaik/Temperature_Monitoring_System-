@@ -1,0 +1,21 @@
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(6,OUTPUT);
+  pinMode(A0,INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int var=analogRead(A0);
+  Serial.println(var);
+  delay(1000);
+  if(var>500){
+    digitalWrite(6,HIGH);
+  }
+  else
+  {
+    digitalWrite(6,LOW);
+  }
+
+}
